@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spa_name: MyString
+  spa_image_id: MyString
+  area_id: 1
+  address: MyString
+  phone_number: MyString
+  regular_holiday: MyString
+  website: MyText
+  opening_day: 2018-12-06
+  charge: MyText
+  all_rating: 1
+  bath_rating: 1
+  meal_rating: 1
+  other_rating: 1
+
+two:
+  spa_name: MyString
+  spa_image_id: MyString
+  area_id: 1
+  address: MyString
+  phone_number: MyString
+  regular_holiday: MyString
+  website: MyText
+  opening_day: 2018-12-06
+  charge: MyText
+  all_rating: 1
+  bath_rating: 1
+  meal_rating: 1
+  other_rating: 1

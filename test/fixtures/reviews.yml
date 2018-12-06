@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: 1
+  spa_id: 1
+  bathing_date: 2018-12-06
+  review_all_rating: 1
+  review_bath_rating: 1
+  review_meal_rating: 1
+  review_other_rating: 1
+  spa_impression: MyText
+  service_id: 1
+  service_impression: MyText
+
+two:
+  user_id: 1
+  spa_id: 1
+  bathing_date: 2018-12-06
+  review_all_rating: 1
+  review_bath_rating: 1
+  review_meal_rating: 1
+  review_other_rating: 1
+  spa_impression: MyText
+  service_id: 1
+  service_impression: MyText

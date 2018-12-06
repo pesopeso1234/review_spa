@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  spa_id: 1
+  service_name: MyString
+  service_image_id: MyString
+  service_type: 1
+  vote: 1
+
+two:
+  spa_id: 1
+  service_name: MyString
+  service_image_id: MyString
+  service_type: 1
+  vote: 1
