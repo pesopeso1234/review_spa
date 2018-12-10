@@ -1,6 +1,15 @@
 # frozen_string_literal: true
 
 class Users::RegistrationsController < Devise::RegistrationsController
+
+  def after_sign_up_path_for(resource)
+    sign_up_complete_path
+  end
+
+  def after_sign_out_path_for(resource_name)
+    withdraw_complete_path
+  end
+
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 

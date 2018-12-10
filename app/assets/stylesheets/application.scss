@@ -15,3 +15,147 @@
  */
 @import "bootstrap-sprockets";  /*ここを追加*/
 @import "bootstrap";            /*ここを追加*/
+
+body{
+    background-color: #F5F4D7;
+}
+
+.navbar-default {
+    background-color: #951F2B;
+    border-color: #951F2B;
+}
+
+.navbar-default .navbar-nav > li > a {
+    color:  #F5F4D7;
+}
+
+.navbar-default .navbar-text{
+    color:  #F5F4D7;
+}
+.navbar-default .navbar-brand{
+    color:  #F5F4D7;
+}
+
+
+.main-header{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #F5F4D7;
+    background: #535233;/*背景色*/
+    border-left: double 7px #951F2B;/*左線*/
+    border-right: double 7px #951F2B;/*右線*/
+}
+
+
+.main-header h2 {
+    margin: 0; 
+    padding: 0;
+}
+
+
+.sub-header {
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    color: #F5F4D7;
+    background: #A5A36C;/*背景色*/
+    border-left: double 7px #951F2B;/*左線*/
+    border-right: double 7px #951F2B;/*右線*/
+}
+
+
+.sub-header h2 {
+    margin: 0; 
+    padding: 0;
+}
+
+
+
+.sign_up_complete_box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #F5F4D7;/*文字色*/
+    background:  #535233;
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.sign_up_complete_box h2 {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+}
+
+.withdraw_confirm_box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #F5F4D7;/*文字色*/
+    background:  #535233;
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.withdraw_confirm_box h2 {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+}
+
+.withdraw_confirm_box p {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+}
+
+
+.withdraw_complete_box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #F5F4D7;/*文字色*/
+    background:  #535233;
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.withdraw_complete_box h2 {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+}
+
+
+.top_image{
+  width: 100%;
+  height: 350px;
+}
+
+.navbar{
+  margin-bottom: 0px;
+}
+
+.top_search_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #951F2B;
+    transition: .4s;
+}
+
+.top_search_btn:hover {
+  opacity: 0.8;
+}
+
+
+.modal-content{
+  background-color: #F5F4D7;
+}
+
+.modal-header h4{
+  color:  #535233;
+}

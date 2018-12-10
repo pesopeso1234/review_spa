@@ -1,0 +1,148 @@
+<div class="top_main_visual">
+	<img src="/assets/top_image.jpg" class="top_image">
+</div>
+<div class="row">
+	<div class="col-xs-1">
+	</div>
+	<div class="col-xs-10">
+		<div class="top_search_wrapper">
+	  		<div class="main-header">
+	    		<h2>エリア検索</h2>
+	  		</div>
+
+	  		<div class="top_search_box">
+	  			<div class="hokkaido_tohoku_search_box">
+	  				<div class="sub-header">
+	    				<h2>北海道&東北地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "北海道", prefecture_id: 1 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "青森", prefecture_id: 2 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "岩手", prefecture_id: 3 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "宮城", prefecture_id: 4 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "秋田", prefecture_id: 5 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "山形", prefecture_id: 6 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "福島", prefecture_id: 7 } %>
+					</div>
+				</div>
+
+				<div class="kanto_search_box">
+	  				<div class="sub-header">
+	    				<h2>関東地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "茨城", prefecture_id: 8 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "栃木", prefecture_id: 9 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "群馬", prefecture_id: 10 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "埼玉", prefecture_id: 11 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "千葉", prefecture_id: 12 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "東京", prefecture_id: 13 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "神奈川", prefecture_id: 14 } %>
+					</div>
+				</div>
+
+				<div class="tyubu_search_box">
+	  				<div class="sub-header">
+	    				<h2>中部地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "新潟", prefecture_id: 15 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "富山", prefecture_id: 16 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "石川", prefecture_id: 17 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "福井", prefecture_id: 18 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "山梨", prefecture_id: 19 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "長野", prefecture_id: 20 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "岐阜", prefecture_id: 21 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "静岡", prefecture_id: 22 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "愛知", prefecture_id: 23 } %>
+					</div>
+				</div>
+
+				<div class="kinki_search_box">
+	  				<div class="sub-header">
+	    				<h2>近畿地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "三重", prefecture_id: 24 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "滋賀", prefecture_id: 25 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "京都", prefecture_id: 26 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "大阪", prefecture_id: 27 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "兵庫", prefecture_id: 28 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "奈良", prefecture_id: 29 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "和歌山", prefecture_id: 30 } %>
+					</div>
+				</div>
+
+				<div class="tyugoku_search_box">
+	  				<div class="sub-header">
+	    				<h2>中国地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "鳥取", prefecture_id: 31 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "島根", prefecture_id: 32 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "岡山", prefecture_id: 33 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "広島", prefecture_id: 34 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "山口", prefecture_id: 35 } %>
+					</div>
+				</div>
+
+				<div class="sikoku_tohoku_search_box">
+	  				<div class="sub-header">
+	    				<h2>四国地方</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "徳島", prefecture_id: 36 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "香川", prefecture_id: 37 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "愛媛", prefecture_id: 38 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "高知", prefecture_id: 39 } %>
+					</div>
+				</div>
+
+				<div class="kyusyu_okinawa_search_box">
+	  				<div class="sub-header">
+	    				<h2>九州地方＆沖縄</h2>
+	  				</div>
+		  			<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "福岡", prefecture_id: 40 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "佐賀", prefecture_id: 41 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "長崎", prefecture_id: 42 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "熊本", prefecture_id: 43 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "大分", prefecture_id: 44 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "宮崎", prefecture_id: 45 } %>
+					</div>
+					<div class="row" style="margin-bottom: 40px">
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "鹿児島", prefecture_id: 46 } %>
+						<%= render partial: 'spas/area_search_btn', locals: { prefecture_name: "沖縄", prefecture_id: 47 } %>
+					</div>
+				</div>
+	  		</div>
+		</div>
+	</div>
+	<div class="col-xs-1">
+	</div>
+</div>
+
+
+

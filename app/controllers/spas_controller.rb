@@ -1,5 +1,6 @@
 class SpasController < ApplicationController
-  def index
+  def top
+
   end
 
   def detail_search_form
@@ -12,6 +13,8 @@ class SpasController < ApplicationController
   end
 
   def index_search
+    area_id = params[:id]
+    @search_spas = Spa.where(area_id: area_id)
   end
 
   def index_search_list
@@ -19,4 +22,6 @@ class SpasController < ApplicationController
 
   def show
   end
+
+
 end

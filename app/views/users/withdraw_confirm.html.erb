@@ -1,2 +1,18 @@
-<h1>Users#withdraw_confirm</h1>
-<p>Find me in app/views/users/withdraw_confirm.html.erb</p>
+<div class="col-xs-3">
+</div>
+
+<div class="col-xs-6">
+	<div class="row">
+		<div class="withdraw_confirm_box">
+    		<h2>本当に退会しますか？</h2>
+    		<p>※退会後は取り消しできません</p>
+		</div>
+	</div>
+	<div class="row" style="text-align: center;">
+		<button class="btn btn-default"><%= link_to "退会", user_registration_path, method: :delete %></button>
+		<button class="btn btn-default"><%= link_to '戻る', root_path  %></button>
+	</div>
+</div>
+
+<div class="col-xs-3">
+</div>

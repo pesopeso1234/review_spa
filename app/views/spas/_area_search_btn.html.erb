@@ -1,0 +1,23 @@
+<div class="col-xs-4" style="text-align: center;">
+	<button type="button" class="top_search_btn" data-toggle="modal" data-target="<%= "#Modal#{prefecture_id}" %>" >
+		<%= prefecture_name %>
+	</button>
+	<div class="modal fade" id="<%= "Modal#{prefecture_id}" %>"tabindex="-1" style="text-align: left;">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title"><%= prefecture_name %></h4>
+				</div>
+				<div class="modal-body">
+					<% areas = Area.where(prefecture: prefecture_id) %>
+						<% areas.each do |area| %>
+							<p><%= link_to area.area_name, index_search_path(id: area.id), class: 'top_search_btn' %></p>
+						<% end %>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">閉じる</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

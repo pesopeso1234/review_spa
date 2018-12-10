@@ -19,4 +19,7 @@ class UsersController < ApplicationController
 
   def withdraw_complete
   end
+
+  def sign_up_complete
+  end
 end
