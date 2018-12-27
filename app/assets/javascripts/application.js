@@ -12,7 +12,46 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require jquery
+//= require jquery.turbolinks
+//= require turbolinks
 //= require bootstrap-sprockets
+//= require moment
+//= require bootstrap-datetimepicker
 //= require_tree .
+
+
+/*!
+ * jQuery Raty - A Star Rating Plugin
+ *
+ * The MIT License
+ *
+ * author:  Washington Botelho
+ * github:  wbotelhos/raty
+ * version: 2.9.0
+ *
+ */
+
+ $(document).on('turbolinks:load', function(){
+  $('.datepicker').datetimepicker({
+    format : "YYYY/MM/DD",
+    icons: {
+      previous: "fa fa-arrow-left",
+      next: "fa fa-arrow-right"
+    }
+  });
+  $('.datetimepicker').datetimepicker({
+    format : "YYYY/MM/DD HH:mm",
+    icons: {
+      time: "fa fa-clock-o",
+      date: "fa fa-calendar",
+      up: "fa fa-arrow-up",
+      down: "fa fa-arrow-down",
+      previous: "fa fa-arrow-left",
+      next: "fa fa-arrow-right"
+    }
+  });
+});
+
+
+

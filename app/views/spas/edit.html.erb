@@ -1,0 +1,9 @@
+<%= form_for(@spa) do |f| %>
+  <!-- 追加部分 -->
+  <h4>画像</h4>
+  <%= f.attachment_field :spa_image %>
+ 
+  <%= f.submit '投稿' %>
+ 
+<% end %>
+

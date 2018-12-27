@@ -10,13 +10,17 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ *= require bootstrap-datetimepicker
  *= require_tree .
  *= require_self
  */
 @import "bootstrap-sprockets";  /*ここを追加*/
 @import "bootstrap";            /*ここを追加*/
 
+
+
 body{
+    padding-top:50px;
     background-color: #F5F4D7;
 }
 
@@ -148,7 +152,7 @@ body{
 }
 
 .top_search_btn:hover {
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 
@@ -159,3 +163,193 @@ body{
 .modal-header h4{
   color:  #535233;
 }
+
+.table{
+    color: #535233;
+    background-color: #E0DFB1;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td{
+    border: 1px solid #535233;
+}
+
+.user_edit_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #535233;
+    transition: .4s;
+}
+
+.user_edit_btn:hover {
+  opacity: 0.9;
+}
+
+
+.confirm_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #535233;
+    transition: .4s;
+}
+
+.confirm_btn:hover {
+  opacity: 0.9;
+}
+
+
+.back_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background: #A5A36C;
+    transition: .4s;
+}
+
+.back_btn:hover {
+  opacity: 0.9;
+}
+
+
+.user_edit_complete_box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #F5F4D7;/*文字色*/
+    background:  #535233;
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.user_edit_complete_box h2 {
+    margin: 0; 
+    padding: 0;
+    text-align: center;
+}
+
+.search_item_box{
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 20px;
+    color : #535233;
+}
+
+
+.detail_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #951F2B;
+    transition: .4s;
+}
+
+.detail_btn:hover {
+  opacity: 0.9;
+}
+
+.nav-tabs > li > a {
+    color: #F5F4D7;
+    border: 1px solid #951F2B;
+    border-radius: 4px 4px 0 0;
+    background-color: #A5A36C;
+}
+
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus{
+    color: #F5F4D7;
+    background-color: #951F2B;
+    border: 1px solid #951F2B;
+    cursor: default;
+}
+
+.spa_detail_box {
+    border: solid 3px #951F2B;
+    border-radius: 0px;
+    color: #535233;
+}
+
+.table > thead > tr > th{
+    background-color: #951F2B;
+    color: #F5F4D7;
+}
+
+
+.review_btn{
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #951F2B;
+    transition: .4s;
+}
+
+.review_btn:hover {
+  opacity: 0.9;
+}
+
+.review_complete_box{
+    padding: 0.5em 1em;
+    margin: 2em 0;
+    font-weight: bold;
+    color: #F5F4D7;/*文字色*/
+    background:  #535233;
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+}
+
+.review_impression_box{
+    border: solid 3px  #535233;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 10px;
+}
+
+.review_item_box{
+    border: solid 3px  #951F2B;/*線*/
+    border-radius: 10px;/*角の丸み*/
+    margin-bottom: 20px;
+    color : #535233;
+}
+
+.review_delete_btn{
+    width: 180px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    color:   #F5F4D7;
+    background:  #535233;
+    transition: .4s;
+}
+
+.review_delete_btn:hover {
+  opacity: 0.9;
+}
+.margin-bottom-10{
+    margin-bottom: 10px;
+}
+

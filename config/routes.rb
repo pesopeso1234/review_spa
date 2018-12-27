@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   get 'spas/detail_search_list'         => "spas#detail_search_list", as: :detail_search_list
   get 'spas/index_search'               => "spas#index_search", as: :index_search
   get 'spas/index_search_list'          => "spas#index_search_list", as: :index_search_list
-  resources :spas, :only =>[:show]
+  get 'spas/spa_edit_top'               => "spas#spa_edit_top", as: :spa_edit_top
+  resources :spas, :only =>[:show, :edit, :update]
 
   get 'reviews/complete'                => "reviews#complete", as: :review_complete
   get 'reviews/edit_complete'           => "reviews#edit_complete", as: :review_edit_complete

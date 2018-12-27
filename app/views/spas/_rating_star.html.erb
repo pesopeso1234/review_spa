@@ -1,0 +1,67 @@
+<% if rating == 5 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 4.5 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-half.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 4.0 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 3.5 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-half.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 3.0 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 2.5 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-half.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 2.0 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 1.5 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-half.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 1.0 %>
+	<img src="/assets/star-on.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% elsif rating >= 0.5 %>
+	<img src="/assets/star-half.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% else %>
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+	<img src="/assets/star-off.png"  width="<%= star_size %>" height="<%= star_size %>" >
+<% end %>

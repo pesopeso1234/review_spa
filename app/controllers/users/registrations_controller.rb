@@ -10,6 +10,10 @@ class Users::RegistrationsController < Devise::RegistrationsController
     withdraw_complete_path
   end
 
+  def after_update_path_for(resource)
+    edit_complete_path
+  end
+
   # before_action :configure_sign_up_params, only: [:create]
   # before_action :configure_account_update_params, only: [:update]
 

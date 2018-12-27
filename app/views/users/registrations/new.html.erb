@@ -8,19 +8,19 @@
   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
     <%= devise_error_messages! %>
 
-    <table class="table table-bordered">
+    <table class="table">
       <tbody>
         <tr>
-          <th><%= f.label "ニックネーム" %></th>
-          <td><%= f.text_field :nickname, autofocus: true, autocomplete: "ニックネーム", :size=>"50" %></td>
+          <th><%= f.label "ニックネーム" %>(20文字以内)</th>
+          <td><%= f.text_field :nickname, autofocus: true, autocomplete: "ニックネーム", :size=>"40", :maxlength=>"20" %></td>
         </tr>
         <tr>
-          <th>氏名</th>
-          <td><%= f.text_field :user_name, autofocus: true, autocomplete: "氏名", :size=>"50" %></td>
+          <th>氏名(20文字以内)</th>
+          <td><%= f.text_field :user_name, autofocus: true, autocomplete: "氏名", :size=>"40", :maxlength=>"20" %></td>
         </tr>
         <tr>
-          <th>カナ氏名</th>
-          <td><%= f.text_field :kana_name, autofocus: true, autocomplete: "カナ氏名", :size=>"50" %></td>
+          <th>カナ氏名(30文字以内)</th>
+          <td><%= f.text_field :kana_name, autofocus: true, autocomplete: "カナ氏名", :size=>"50", :maxlength=>"30" %></td>
         </tr>
         <tr>
           <th>性別</th>
@@ -39,7 +39,7 @@
           <td><%= f.email_field :email, autofocus: true, autocomplete: "メールアドレス", :size=>"50" %></td>
         </tr>
         <tr>
-          <th><%= f.label "パスワード" %></th>
+          <th><%= f.label "パスワード" %>(6文字以上)</th>
           <td><%= f.password_field :password, autocomplete: "パスワード", :size=>"50" %></td>
         </tr>
         <tr>
@@ -49,7 +49,7 @@
       </tbody>
     </table>
     <div class="actions">
-      <%= f.submit "新規登録" %>
+      <%= f.submit "新規登録", class: 'confirm_btn' %>
     </div>
   <% end %>
 </div>

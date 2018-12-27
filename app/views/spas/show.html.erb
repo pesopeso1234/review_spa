@@ -1,1 +1,217 @@
-show
+	
+
+<div class="row">
+
+	<div class="col-xs-1">
+	</div>
+
+	<div class="col-xs-10">
+		<div class="spa_detail_wrapper">
+	  		<div class="main-header">
+	    		<h2><%= @selected_spa.spa_name %></h2>
+	  		</div>
+
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#sampleContentA" data-toggle="tab">店舗評価</a></li>
+				<li><a href="#sampleContentB" data-toggle="tab">サービスランキング</a></li>
+				<li><a href="#sampleContentC" data-toggle="tab">基本情報</a></li>
+			</ul>
+
+			<div class="tab-content">
+				<div class="tab-pane active" id="sampleContentA">
+					<div class="col-xs-12 spa_detail_box">
+						<div class="col-xs-12" style="border-bottom: 1px solid #951F2B;">
+							        <div class="col-xs-5" style="text-align: center;">
+							        	<h4><%= @selected_spa.spa_name%></h4>
+							        	<% if @selected_spa.spa_image.present? %>
+											<%= attachment_image_tag  @selected_spa, :spa_image, :fill, 300, 200, class: 'margin-bottom-10'%>
+										<% else %>
+											<img src="/assets/no-image.png" class="no-image" width="300" height="200" style="margin-bottom: 10px;">
+										<% end %>
+							        </div>
+							        <div class="col-xs-7" style="margin-top: 40px;">
+							        	<div class="row">
+								        	<div class="col-xs-4">
+								        		<h4>総合評価:</h4>
+								        	</div>
+							        		<div class="col-xs-8">
+												<%= render partial: 'spas/rating_star', locals: { rating:  @selected_spa.all_rating, star_size: 35} %>
+												<span style="font-size: 20px; vertical-align: middle;"><%= "(#{@selected_spa.all_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-4">
+								        		<h4>お風呂の評価:</h4>
+								        	</div>
+							        		<div class="col-xs-8">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  @selected_spa.bath_rating, star_size: 35} %>
+							        			<span style="font-size: 20px; vertical-align: middle;"><%= "(#{@selected_spa.bath_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-4">
+								        		<h4>お食事の評価:</h4>
+								        	</div>
+							        		<div class="col-xs-8">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  @selected_spa.meal_rating, star_size: 35} %>
+							        			<span style="font-size: 20px; vertical-align: middle;"><%= "(#{@selected_spa.meal_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-4">
+								        		<h4>その他の評価:</h4>
+								        	</div>
+							        		<div class="col-xs-8">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  @selected_spa.other_rating,star_size: 35} %>
+							        			<span style="font-size: 20px; vertical-align: middle;"><%= "(#{@selected_spa.other_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								       	<div class="col-xs-12" style="text-align: center; margin: 10px 0px;">
+							        		<%= link_to "レビューをする", new_review_path(id: @selected_spa.id), class: 'review_btn' %>
+							        	</div>
+							        </div>
+						</div>
+						<div class="col-xs-12">
+							<div>
+			    				<h4 class="sub-header">レビュー一覧</h4>
+			    			</div>
+			    			<div>
+				    			<% @reviews.each do |review| %>
+				    				<div class="col-xs-12 review_item_box">
+				    					<div class="col-xs-12">
+				    						<div class="col-xs-12" style="border-bottom: solid 3px  #535233;">
+				    								<div class="col-xs-2">
+						    							ユーザ名
+						    						</div>
+						    						<div class="col-xs-6">
+						    							<%= review.user.nickname %> 様
+						    						</div>
+													<div class="col-xs-2">
+							    						入浴日
+							    					</div>
+							    					<div class="col-xs-2">
+						    							<%= review.bathing_date %>
+						    						</div>
+				    						</div>
+				    						<div class="col-xs-12" style="border-bottom: solid 3px  #535233; margin-bottom: 30px;">
+				    							<div class="row">
+				    								<div class="col-xs-2">
+				    									<p>総合評価:</p>
+				    								</div>
+				    								<div class="col-xs-4">
+				    									<%= render partial: 'spas/rating_star', locals: { rating:review.review_all_rating, star_size: 16} %>
+				    									<span style="font-size: 12px; vertical-align: middle;"><%= "(#{review.review_all_rating.round(1)}点)" %></span>
+				    								</div>
+				    								<div class="col-xs-2">
+				    									<p>お風呂の評価</p>
+				    								</div>
+				    								<div class="col-xs-4">
+														<%= render partial: 'spas/rating_star', locals: { rating:review.review_bath_rating, star_size: 16} %>
+														<span style="font-size: 12px; vertical-align: middle;"><%= "(#{review.review_bath_rating.round(1)}点)" %></span>
+				    								</div>
+				    							</div>
+				    							<div class="row">
+				    								<div class="col-xs-2">
+				    									<p>お食事の評価</p>
+				    								</div>
+				    								<div class="col-xs-4">
+														<%= render partial: 'spas/rating_star', locals: { rating:review.review_meal_rating, star_size: 16} %>
+														<span style="font-size: 12px; vertical-align: middle;"><%= "(#{review.review_meal_rating.round(1)}点)" %></span>
+				    								</div>
+				    								<div class="col-xs-2">
+				    									<p>その他の評価</p>
+				    								</div>
+				    								<div class="col-xs-4">
+														<%= render partial: 'spas/rating_star', locals: { rating:review.review_other_rating, star_size: 16} %>
+														<span style="font-size: 12px; vertical-align: middle;"><%= "(#{review.review_other_rating.round(1)}点)" %></span>
+				    								</div>
+				    							</div>
+				    						</div>
+				    						<div class="col-xs-12">
+				    							<p>施設の感想</p>
+				    						</div>
+					    					<div class="review_impression_box col-xs-12" style="margin-bottom: 20px;" >
+					    						<p><%= simple_format(review.spa_impression) %></p>
+					    					</div>
+				    						<div class="col-xs-3">
+				    							<p>サービスの感想</p>
+				    						</div>
+				    						<div class="col-xs-9">
+				    							<p>ベストサービス：<%= "#{review.service.service_name}(#{review.service.service_type})" %></p>
+				    						</div>
+					    					<div class="review_impression_box col-xs-12">
+					    						<p><%= simple_format(review.service_impression) %></p>
+					    					</div>
+					    				</div>
+							        </div>
+				    			<% end %>
+				    		</div>
+				    		<div class="col-xs-12"><%= paginate @reviews %></div>
+			  			</div>
+					 </div>
+
+				</div>
+				<div class="tab-pane" id="sampleContentB">
+					<div class="col-xs-12 spa_detail_box">
+						<div>
+							<table class="table" style="margin-top: 20px;">
+								<thead>
+									<tr>
+										<th>順位</th>
+										<th>サービス名</th>
+										<th>サービスの種類</th>
+										<th>得票数</th>
+									</tr>
+								</thead>
+								<tbody>
+									<% @spa_services.each_with_index do |service, i| %>
+										<tr>
+											<th><%= "#{i+1}" %></th>
+											<td><%= service.service_name %></td>
+											<td><%= service.service_type %></td>
+											<td><%= service.vote %></td>
+										</tr>
+									<% end %>
+								</tbody>
+							</table>
+				 		</div>
+			    	</div>
+			    </div>
+				<div class="tab-pane" id="sampleContentC">
+					<div class="col-xs-12 spa_detail_box">
+						<div>
+							<table class="table" style="margin-top: 20px;">
+								<tbody>
+										<tr>
+											<th>所在地</th>
+											<td><%=  @selected_spa.address %></td>
+										</tr>
+										<tr>
+											<th>電話番号</th>
+											<td><%=  @selected_spa.phone_number %></td>
+										</tr>
+										<tr>
+											<th>定休日</th>
+											<td><%=  @selected_spa.regular_holiday %></td>
+										</tr>
+										<tr>
+											<th>公式サイト</th>
+											<td><%= @selected_spa.website %></td>
+										</tr>
+										<tr>
+											<th>料金</th>
+											<td><%= @selected_spa.charge %></td>
+										</tr>
+								</tbody>
+							</table>
+				 		</div>
+			    	</div>
+			    </div>
+			</div>
+	  	</div>
+	</div>
+
+	<div class="col-xs-1">
+	</div>
+
+</div>

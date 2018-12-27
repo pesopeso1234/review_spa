@@ -10,10 +10,10 @@ class CreateSpas < ActiveRecord::Migration[5.2]
       t.text :website
       t.date :opening_day
       t.text :charge
-      t.integer :all_rating
-      t.integer :bath_rating
-      t.integer :meal_rating
-      t.integer :other_rating
+      t.float :all_rating
+      t.float :bath_rating
+      t.float :meal_rating
+      t.float :other_rating
 
       t.timestamps
     end

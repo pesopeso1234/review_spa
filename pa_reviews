@@ -1,0 +1,32 @@
+
+[1mFrom:[0m /vagrant/review_spa/app/controllers/reviews_controller.rb @ line 68 ReviewsController#destroy:
+
+    [1;34m57[0m: [32mdef[0m [1;34mdestroy[0m
+    [1;34m58[0m:   @review = [1;34;4mReview[0m.find_by([35mid[0m: params[[33m:id[0m])
+    [1;34m59[0m:   @reviewed_spa = [1;34;4mSpa[0m.find_by([35mid[0m: @review.spa_id)
+    [1;34m60[0m:   @best_service = [1;34;4mService[0m.find_by([35mid[0m: @review.service_id)
+    [1;34m61[0m:   @spa_reviews = [1;34;4mReview[0m.where([35mspa_id[0m: @reviewed_spa.id)
+    [1;34m62[0m:   @all_review_all_rating = [1;34m0[0m
+    [1;34m63[0m:   @all_review_bath_rating = [1;34m0[0m
+    [1;34m64[0m:   @all_review_meal_rating = [1;34m0[0m
+    [1;34m65[0m:   @all_review_other_rating = [1;34m0[0m
+    [1;34m66[0m:   @review.destroy
+    [1;34m67[0m:   binding.pry
+ => [1;34m68[0m:   @spa_reviews.each_with_index [32mdo[0m |review, i|
+    [1;34m69[0m:     @all_review_all_rating += review.review_all_rating
+    [1;34m70[0m:     @all_review_bath_rating += review.review_bath_rating
+    [1;34m71[0m:     @all_review_meal_rating += review.review_meal_rating
+    [1;34m72[0m:     @all_review_other_rating += review.review_other_rating
+    [1;34m73[0m:     [32mif[0m i == @spa_reviews.size - [1;34m1[0m
+    [1;34m74[0m:       @reviewed_spa.all_rating = (@all_review_all_rating / @spa_reviews.size)
+    [1;34m75[0m:       @reviewed_spa.bath_rating = (@all_review_bath_rating / @spa_reviews.size)
+    [1;34m76[0m:       @reviewed_spa.meal_rating = (@all_review_meal_rating / @spa_reviews.size)
+    [1;34m77[0m:       @reviewed_spa.other_rating = (@all_review_other_rating / @spa_reviews.size)
+    [1;34m78[0m:       @reviewed_spa.update([35mall_rating[0m: @reviewed_spa.all_rating, [35mbath_rating[0m: @reviewed_spa.bath_rating, [35mmeal_rating[0m: @reviewed_spa.meal_rating, [35mother_rating[0m: @reviewed_spa.other_rating)
+    [1;34m79[0m:       @best_service.vote = (@best_service.vote - [1;34m1[0m)
+    [1;34m80[0m:       @best_service.update([35mvote[0m: @best_service.vote)
+    [1;34m81[0m:       redirect_to user_path(current_user.id)
+    [1;34m82[0m:     [32mend[0m
+    [1;34m83[0m:   [32mend[0m
+    [1;34m84[0m: [32mend[0m
+

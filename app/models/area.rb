@@ -1,5 +1,6 @@
 class Area < ApplicationRecord
   has_many :spas
+  has_many :users
 
 	enum prefecture: {
     北海道:1,青森県:2,岩手県:3,宮城県:4,秋田県:5,山形県:6,福島県:7,

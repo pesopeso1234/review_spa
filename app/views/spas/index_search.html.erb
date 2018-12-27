@@ -1,3 +1,84 @@
-<% @search_spas.each do |spa| %>
-	<p><%= spa.spa_name %></p>
-<% end %>
+
+
+<div class="row">
+	<div class="col-xs-1">
+	</div>
+
+	<div class="col-xs-10">
+		<div class="top_search_list_wrapper">
+	  		<div class="main-header">
+	    		<h2>検索結果</h2>
+	  		</div>
+
+	  		<div class="top_search_list_box">
+	  			<div class="sub-header">
+	    			<h4><%= "#{@search_area.prefecture}(#{@search_area.area_name})にあるスーパー温泉の検索結果 #{@search_spas_size}件" %></h4>
+	  			</div>
+	  					<% @search_spas.each do |spa| %>
+						        <div class="col-xs-12 search_item_box">
+							        <div class="col-xs-5" style="text-align: center;">
+							        	<h4><%= spa.spa_name%></h4>
+							        	<% if spa.spa_image.present? %>
+											<%= attachment_image_tag spa, :spa_image, :fill, 300, 200, class: 'margin-bottom-10'%>
+										<% else %>
+											<img src="/assets/no-image.png" class="no-image" width="300" height="200" style="margin-bottom: 10px;">
+										<% end %>
+							        </div>
+							        <div class="col-xs-7">
+							        	<div class="row">
+								        	<div class="col-xs-5">
+								        		<h4>総合評価</h4>
+								        	</div>
+							        		<div class="col-xs-7">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  spa.all_rating, star_size: 32} %>
+							        			<span style="font-size: 18px; vertical-align: middle;"><%= "(#{spa.all_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-5">
+								        		<h4>お風呂の評価</h4>
+								        	</div>
+							        		<div class="col-xs-7">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  spa.bath_rating, star_size: 32} %>
+							        			<span style="font-size: 18px; vertical-align: middle;"><%= "(#{spa.bath_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-5">
+								        		<h4>お食事の評価</h4>
+								        	</div>
+							        		<div class="col-xs-7">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  spa.meal_rating, star_size: 32} %>
+							        			<span style="font-size: 18px; vertical-align: middle;"><%= "(#{spa.meal_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-5">
+								        		<h4>その他の評価</h4>
+								        	</div>
+							        		<div class="col-xs-7">
+							        			<%= render partial: 'spas/rating_star', locals: { rating:  spa.other_rating, star_size: 32} %>
+							        			<span style="font-size: 18px; vertical-align: middle;"><%= "(#{spa.other_rating.round(1)}点)" %></span>
+							        		</div>
+								        </div>
+								        <div class="row">
+								        	<div class="col-xs-12">
+								        		<h4><%= spa.address%></h4>
+								        	</div>
+							        	</div>
+							        	<div class="row" style="text-align: center; margin-bottom: 20px;">
+							        		<%= link_to "もっと見る", spa_path(id: spa.id), class: 'detail_btn' %>
+							        	</div>
+							        </div>
+						        </div>
+					    <% end %>
+					    <div class="col-xs-12"><%= paginate @search_spas %></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-1">
+	</div>
+</div>
+
+
+
